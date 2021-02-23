@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,9 @@ public class Buttons : MonoBehaviour
     public GameObject buttonBack;
     public GameObject buttonScan;
     public GameObject backGround;
+    public GameObject textSettings;
+    public GameObject textInfo;
+    public GameObject scrollView;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +44,8 @@ public class Buttons : MonoBehaviour
         buttonSettings.SetActive(false);
         buttonBack.SetActive(true);
         buttonScan.SetActive(false);
-    }
+        textSettings.SetActive(true);
+}
 
     public void Info()
     {
@@ -50,6 +54,8 @@ public class Buttons : MonoBehaviour
         buttonSettings.SetActive(false);
         buttonBack.SetActive(true);
         buttonScan.SetActive(false);
+        textInfo.SetActive(true);
+        scrollView.SetActive(true);
     }
 
     public void Back()
@@ -60,5 +66,8 @@ public class Buttons : MonoBehaviour
         buttonBack.SetActive(false);
         buttonScan.SetActive(false);
         backGround.SetActive(true);
+        textSettings.SetActive(false);
+        textInfo.SetActive(false);
+        scrollView.SetActive(false);
     }
 }
